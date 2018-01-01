@@ -140,6 +140,8 @@ class OpenSSLConan(ConanFile):
                 target = "%slinux-x86_64" % target_prefix
             elif self.settings.arch == "armv7":
                 target = "%slinux-armv4" % target_prefix
+            elif self.settings.arch == "armv8":
+                target = "%slinux-aarch64" % target_prefix
 
         elif self.settings.os == "SunOS":
             if self.settings.compiler in ["apple-clang", "clang", "gcc"]:
